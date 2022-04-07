@@ -1,0 +1,65 @@
+@import './varables';
+
+*{
+  padding:0;
+  margin: 0;
+}
+
+
+
+body{
+  min-height:100vh;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+  "sidebar header"
+  "sidebar main"
+  "sidebar main";
+  height:100vh;
+}
+
+header{
+  background-color: $green600;
+  grid-area: header;
+}
+
+main{
+  background-color: $green400;
+  grid-area: main;
+}
+
+.sidebar{
+  background-color: $green100;
+  grid-area: sidebar;
+  display:flex;
+  flex-direction: column;
+  gap:60px;
+  
+  
+  .section-1,
+  .section-2,
+  .section-3{
+    padding-left:30px;
+    gap:20px;
+  
+  }  
+  .section-1{
+    margin-top:10px;
+  
+  }
+  .section-2{
+    display:flex;
+    margin-top: -20px;
+    flex-direction:column;
+  
+  }
+  .section-3{
+    display:flex;
+    flex-direction: column;
+  }
+}
+
