@@ -4,12 +4,25 @@
   padding:0;
   margin: 0;
 }
+input[type=text]{
+  border-radius: 12px;
+}
+button{
+  padding-top:7px;
+  padding-bottom:7px;
+  
+}
 
-
+img{
+  height:75px;
+  background-color: yellowgreen;
+  border-radius:50px;
+}
 
 body{
   min-height:100vh;
 }
+
 
 .grid{
   display:grid;
@@ -25,7 +38,68 @@ body{
 header{
   background-color: $green600;
   grid-area: header;
-}
+  display:grid;
+
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: 
+  "topleft topright"
+  "bottomleft bottomright";
+
+  
+    
+    
+    .half-left-top{
+      display:flex;
+      align-items: center;
+      grid-area: topleft;
+      gap:20px;
+      margin-left:20px;
+
+      input{
+        flex:.9;
+        padding:5px;
+      }
+
+  }
+    
+    .half-right-top{
+      grid-area: topright;
+      display:flex;
+      align-items: center;
+      justify-content:flex-end;
+      margin-right:3em;
+      gap:20px;
+      
+      img{
+        height: 40px;
+      }
+    }
+  
+// ------------------------------  //
+    .half-left-bot{ 
+      grid-area:bottomleft;
+      margin-left:20px;
+      display:flex;
+      align-items: center;
+      gap:20px;
+      
+     
+    }
+    .half-right-bot{
+      grid-area:bottomright;
+      display:flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-right:20px;
+
+      button{
+        flex-basis:120px;
+      }
+      
+    }
+  }
+
 
 main{
   background-color: $green400;
