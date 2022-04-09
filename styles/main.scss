@@ -2,8 +2,11 @@
 @import './varables';
 
 
-li{
-  list-style: none;
+
+a{
+  text-decoration: none;
+  color:inherit;
+  background-color: $green200;
 }
 *{
   padding:0;
@@ -174,11 +177,13 @@ header{
   &>img{
     width:1.8em;
     padding:5px;  
+   
   
     &:hover{
       background-color: $green500;
       cursor: pointer;
     }
+    
   }
 }
 main{
@@ -373,7 +378,7 @@ main{
     gap:20px;
     user-select:none;
     
-    & > p{
+    & > p, &> a{
       &:hover{
         background-color: $green500;
         cursor: pointer;
